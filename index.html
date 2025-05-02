@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Freelance Mechanical Engineer Portfolio" />
+  <title>[Your Name] | Mechanical Engineer</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/fontawesome.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="logo">[Your Name]</div>
+    <ul class="nav-links">
+      <li><a href="#services"><i class="fas fa-tools"></i></a></li>
+      <li><a href="#portfolio"><i class="fas fa-briefcase"></i></a></li>
+      <li><a href="#about"><i class="fas fa-user"></i></a></li>
+      <li><a href="#booking"><i class="fas fa-calendar"></i></a></li>
+      <li><a href="#contact"><i class="fas fa-envelope"></i></a></li>
+    </ul>
+    <div class="hamburger">&#9776;</div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>[Your Name]</h1>
+      <p>Freelance Mechanical Engineer</p>
+      <div class="availability">Available for New Projects <span class="dot green"></span></div>
+      <a href="#booking" class="cta-btn">Discuss Your Project</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="services" id="services">
+    <h2>My Engineering Services</h2>
+    <div class="service-cards">
+      <div class="card">
+        <i class="fas fa-drafting-compass"></i>
+        <h3>CAD Design</h3>
+        <p>3D modeling, assemblies, and detailed drawings.</p>
+        <a href="#contact" class="btn">Inquire</a>
+      </div>
+      <!-- Add more cards -->
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio" id="portfolio">
+    <h2>My Portfolio</h2>
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="cad">CAD</button>
+      <button data-filter="fea">FEA</button>
+    </div>
+    <div class="project-gallery">
+      <div class="project-item cad">
+        <img src="images/project1.jpg" alt="Project 1">
+        <p>Project Title</p>
+      </div>
+      <!-- Add more projects -->
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <img src="images/headshot.jpg" alt="Headshot" class="headshot">
+    <div class="bio">
+      <h2>About Me</h2>
+      <p>Passionate mechanical engineer with 5+ years of experience...</p>
+      <div class="skills">
+        <div class="skill-bar">
+          <span>SolidWorks</span>
+          <div class="progress"><div class="progress-fill" style="width:90%"></div></div>
+        </div>
+        <!-- Add more skills -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section class="booking" id="booking">
+    <h2>Availability & Booking</h2>
+    <p class="status">Available for New Projects <span class="dot green"></span></p>
+    <form action="https://formspree.io/f/[YOUR-FORM-ID]" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="project" placeholder="Project Details" required></textarea>
+      <button type="submit">Request Consultation</button>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">Your Profile</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
+    <div class="socials">
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
