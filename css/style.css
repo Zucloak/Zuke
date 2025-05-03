@@ -381,13 +381,6 @@ footer .socials a:hover {
     display: block;
   }
 
-  .navbar-container {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.5rem 1rem;
-  }
-
   .nav-links {
     position: absolute;
     top: 55px;
@@ -397,12 +390,13 @@ footer .socials a:hover {
     overflow: hidden;
     background-color: #004066;
     transition: max-height 0.3s ease-out;
-    z-index: 999;
+    z-index: 9999;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding-bottom: 20px;
   }
 
   .nav-links.active {
-    max-height: 400px; /* Adjust based on number of links */
+    max-height: 400px;
   }
 
   .nav-links li {
