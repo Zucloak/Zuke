@@ -402,7 +402,7 @@ footer .socials a:hover {
   }
 
   .nav-links.active {
-    max-height: 250px; /* Adjust based on number of links */
+    max-height: 400px; /* Adjust based on number of links */
   }
 
   .nav-links li {
