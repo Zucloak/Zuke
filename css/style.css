@@ -2,15 +2,24 @@
 body {
   margin: 0;
   font-family: 'Open Sans', sans-serif;
-  background: #00334D;
-  color: #fff;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text for contrast */
   line-height: 1.6;
 }
+
+section {
+  padding: 60px 20px;
 
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  margin: 10px 0;
+}
+
+a {
+  color: #FFD700; /* Gold for contrast */
+  text-decoration: none;
 }
 
 /* Navbar */
@@ -35,7 +44,7 @@ img {
 
 /* Hero Section */
 .hero {
-  background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+  background-color: #000;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -76,4 +85,14 @@ img {
   .nav-links { display: none; }
   .hamburger { display: block; }
   .nav-links.active { display: flex; flex-direction: column; }
+}
+
+button, .cta-btn {
+  background-color: #FFD700;
+  color: #000;
+  border: none;
+  padding: 12px 24px;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
 }
