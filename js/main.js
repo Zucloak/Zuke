@@ -1,14 +1,21 @@
-// Mobile Menu Toggle
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('nav-links');
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('active');
-});
+  if (!hamburger || !navLinks) {
+    console.error("Hamburger or nav-links NOT FOUND");
+    return;
+  }
 
-// Optional: Close menu when clicking a link
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', () => {
-    navLinks.classList.remove('active');
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    console.log("Hamburger clicked");
+  });
+
+  // Optional: Close menu after clicking a link
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
   });
 });
