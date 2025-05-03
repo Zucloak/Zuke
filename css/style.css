@@ -368,4 +368,69 @@ footer .socials a:hover {
   .about-content {
     flex-direction: column;
   }
+
+/* === Responsive Navbar === */
+
+.logo {
+  color: #FFD700;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #FFD700;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #004066;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.mobile-menu li {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.mobile-menu a {
+  color: #FFD700;
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  background-color: #00334D;
+}
+
+/* Show mobile styles below 768px */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
 }
