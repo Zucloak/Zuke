@@ -3,50 +3,80 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | [Your Name]</title>
+  <title>About Me | [Your Name]</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="home">
-<!-- Navbar -->
-<nav class="navbar">
-  <div class="navbar-container">
-    <!-- Logo or Title -->
-    <div class="logo">[Your Name]</div>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <ul class="nav-links">
+        <li><a href="index.html"><i class="fas fa-home"></i><span>HOME</span></a></li>
+        <li><a href="about.html" class="active"><i class="fas fa-user"></i><span>ABOUT ME</span></a></li>
+        <li><a href="services.html"><i class="fas fa-tools"></i><span>SERVICES</span></a></li>
+        <li><a href="portfolio.html"><i class="fas fa-briefcase"></i><span>PORTFOLIO</span></a></li>
+        <li><a href="contact.html"><i class="fas fa-envelope"></i><span>CONTACT</span></a></li>
+      </ul>
+    </div>
+  </nav>
 
-    <!-- Desktop Menu -->
-    <ul class="nav-links">
-      <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-      <li><a href="about.html"><i class="fas fa-user"></i> ABOUT ME</a></li>
-      <li><a href="services.html"><i class="fas fa-tools"></i> SERVICES</a></li>
-      <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> PORTFOLIO</a></li>
-      <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
-    </ul>
+  <!-- About Section -->
+  <section class="about">
+    <div class="about-content">
+      <img src="images/headshot.jpg" alt="Headshot" class="headshot">
+      <div class="bio">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm <strong>[Your Name]</strong>, a passionate freelance mechanical engineer with over 5 years of experience in CAD design, FEA analysis, and product development.
+          I specialize in turning complex engineering challenges into elegant, efficient solutions for clients across industries like automotive, aerospace, and consumer goods.
+        </p>
+        <p>
+          With a strong background in SolidWorks, ANSYS, and CNC machining, I help businesses bring their ideas to life through precision design and rigorous simulation-based validation.
+        </p>
 
-    <!-- Mobile Hamburger Icon -->
-    <div class="hamburger" id="hamburger">&#9776;</div>
-  </div>
+        <div class="skills">
+          <h3>Skills & Expertise</h3>
+          <div class="skill-bar">
+            <span>SolidWorks</span>
+            <div class="progress"><div class="progress-fill" style="width:90%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <span>ANSYS / FEA</span>
+            <div class="progress"><div class="progress-fill" style="width:75%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <span>CNC Machining</span>
+            <div class="progress"><div class="progress-fill" style="width:85%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <span>Python / Scripting</span>
+            <div class="progress"><div class="progress-fill" style="width:70%"></div></div>
+          </div>
+          <div class="skill-bar">
+            <span>Project Management</span>
+            <div class="progress"><div class="progress-fill" style="width:80%"></div></div>
+          </div>
+        </div>
 
-  <!-- Mobile Dropdown Menu -->
-  <ul class="mobile-menu" id="mobile-menu">
-    <li><a href="index.html"><i class="fas fa-home"></i> HOME</a></li>
-    <li><a href="about.html"><i class="fas fa-user"></i> ABOUT ME</a></li>
-    <li><a href="services.html"><i class="fas fa-tools"></i> SERVICES</a></li>
-    <li><a href="portfolio.html"><i class="fas fa-briefcase"></i> PORTFOLIO</a></li>
-    <li><a href="contact.html"><i class="fas fa-envelope"></i> CONTACT</a></li>
-  </ul>
-</nav>
+        <h3>Education & Certifications</h3>
+        <ul>
+          <li>Bachelor of Science in Mechanical Engineering – XYZ University (2018)</li>
+          <li>Certified SolidWorks Professional (CSWP)</li>
+          <li>ANSYS Mechanical Simulation Certification</li>
+        </ul>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>[Your Name]</h1>
-      <p>Freelance Mechanical Engineer</p>
-      <div class="availability">Available for New Projects <span class="dot green"></span></div>
-      <a href="contact.html" class="cta-btn">Discuss Your Project</a>
+        <h3>Why Work With Me?</h3>
+        <p>
+          I pride myself on delivering high-quality results with clear communication and fast turnaround times. Whether you need full product development or just expert consultation, I’m here to support your goals with professionalism and technical excellence.
+        </p>
+
+        <a href="contact.html" class="cta-btn">Hire Me Now</a>
+      </div>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 [Your Name]. All Rights Reserved.</p>
     <div class="socials">
@@ -54,6 +84,5 @@
       <a href="#"><i class="fab fa-github"></i></a>
     </div>
   </footer>
-<script src="js/main.js"></script>
 </body>
 </html>
