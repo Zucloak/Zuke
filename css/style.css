@@ -24,16 +24,75 @@ a {
 
 /* Navbar */
 .navbar {
-  background: #004066;
+  background-color: #00334D; /* Dark teal background */
   padding: 1rem 2rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #FFD700; /* Gold border */
+  border-radius: 20px; /* Rounded corners */
+  background: linear-gradient(to bottom, #004066, #00334D); /* Gradient effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #4ECDC4; /* Teal accent */
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-links li:hover::before {
+  transform: scaleX(1);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FFD700; /* Gold text */
+  font-family: 'Roboto Condensed', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a i {
+  font-size: 2rem;
+}
+
+.nav-links a span {
+  letter-spacing: 2px;
+}
+
+.nav-links a:hover {
+  color: #4ECDC4; /* Hover color (teal) */
+}
 .nav-links a {
   color: #FFD700;
   margin: 0 1rem;
@@ -95,4 +154,17 @@ button, .cta-btn {
   cursor: pointer;
   font-weight: bold;
   border-radius: 4px;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
 }
