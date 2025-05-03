@@ -1,10 +1,4 @@
 /* === Global Styles === */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
@@ -13,12 +7,7 @@ body {
   line-height: 1.6;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3 {
   margin-top: 0;
   font-weight: bold;
 }
@@ -35,7 +24,10 @@ button {
 /* === Navbar === */
 .navbar {
   background-color: #004066;
-  padding: 0.75rem 1.5rem;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -46,23 +38,15 @@ button {
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
+  gap: 2rem;
 }
 
-.logo {
-  color: #FFD700;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Desktop Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
   gap: 2rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
@@ -109,60 +93,6 @@ button {
   color: #4ECDC4;
 }
 
-/* Hamburger Icon for Mobile */
-.hamburger {
-  display: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #FFD700;
-}
-
-/* Mobile Dropdown Menu */
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  background-color: #004066;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  padding: 10px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  z-index: 999;
-}
-
-.mobile-menu li {
-  margin: 10px 0;
-  text-align: center;
-}
-
-.mobile-menu a {
-  color: #FFD700;
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  display: block;
-  transition: background-color 0.3s ease;
-}
-
-.mobile-menu a:hover {
-  background-color: #00334D;
-}
-
-/* Responsive Navbar */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-  }
-
-  .mobile-menu.active {
-    display: flex;
-  }
-}
-
 /* === Hero Section === */
 .hero {
   background-color: #000;
@@ -197,9 +127,64 @@ button {
   background-color: #4ECDC4;
 }
 
-/* === Services Section === */
-.services {
+/* === About Section === */
+.about-section {
   padding: 60px 20px;
+  text-align: center;
+}
+
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #FFD700;
+  margin-bottom: 20px;
+}
+
+.bio h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.skills .skill-bar {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.skill-bar span {
+  display: block;
+  margin-bottom: 5px;
+  color: #FFD700;
+}
+
+.progress {
+  background-color: #004066;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.progress-fill {
+  background-color: #FFD700;
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* === Services Section === */
+.services-section {
+  padding: 60px 20px;
+  text-align: center;
 }
 
 .service-cards {
@@ -230,40 +215,16 @@ button {
   margin: 10px 0;
 }
 
-.card p {
-  margin-bottom: 20px;
-}
-
-.card .btn {
-  background-color: #FFD700;
-  color: #000;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.card .btn:hover {
-  background-color: #4ECDC4;
-}
-
 /* === Portfolio Section === */
-.portfolio {
+.portfolio-section {
   padding: 60px 20px;
+  text-align: center;
 }
 
-.filter-buttons button {
-  background-color: transparent;
-  border: none;
+.portfolio-section h2 {
+  font-size: 3rem;
   color: #FFD700;
-  font-weight: bold;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.filter-buttons button.active {
-  color: #4ECDC4;
+  margin-bottom: 40px;
 }
 
 .project-gallery {
@@ -291,72 +252,48 @@ button {
   transform: scale(1.1);
 }
 
-/* === About Me Section === */
-.about {
-  padding: 60px 20px;
-}
-
-.about-content {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  max-width: 1000px;
-  margin: auto;
-}
-
-.headshot {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid #FFD700;
-}
-
-.bio {
-  max-width: 600px;
-}
-
-.skills .skill-bar {
-  margin: 10px 0;
-}
-
-.skill-bar span {
-  display: block;
-  margin-bottom: 5px;
-  color: #FFD700;
-}
-
-.progress {
+.view-more-btn {
+  display: inline-block;
+  padding: 15px 30px;
   background-color: #004066;
-  height: 10px;
-  border-radius: 5px;
-  overflow: hidden;
-  width: 100%;
+  color: #FFD700;
+  border: 3px solid #FFD700;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 10px;
+  margin-top: 40px;
 }
 
-.progress-fill {
+.view-more-btn:hover {
   background-color: #FFD700;
-  height: 100%;
-  transition: width 0.3s ease;
+  color: #000;
 }
 
-/* === Booking Section === */
-.booking {
+/* === Contact Section === */
+.contact-section {
   padding: 60px 20px;
+  text-align: center;
 }
 
-.status {
-  margin: 1rem 0;
-  color: #4ECDC4;
+.contact-section h2 {
+  color: #FFD700;
+  margin-bottom: 30px;
 }
 
-form input,
-form textarea {
+.contact-section form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
   width: 100%;
   padding: 10px;
-  margin: 10px 0;
   border: 1px solid #FFD700;
   border-radius: 5px;
   background-color: #000;
@@ -365,29 +302,37 @@ form textarea {
   transition: border-color 0.3s ease;
 }
 
-form input:focus,
-form textarea:focus {
+.contact-section input:focus,
+.contact-section textarea:focus {
   border-color: #4ECDC4;
   outline: none;
 }
 
-form button {
+.contact-section button {
   background-color: #FFD700;
   color: #000;
   padding: 10px 20px;
   border: none;
-  cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
-form button:hover {
+.contact-section button:hover {
   background-color: #4ECDC4;
 }
 
-/* === Contact Section === */
-.contact {
-  padding: 60px 20px;
+.contact-info {
+  margin-top: 30px;
+  color: #ccc;
+}
+
+.contact-info a {
+  color: #FFD700;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #4ECDC4;
 }
 
 /* === Footer === */
@@ -406,4 +351,21 @@ footer .socials a {
 
 footer .socials a:hover {
   color: #4ECDC4;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column;
+  }
 }
