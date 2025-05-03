@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home | [Your Name]</title>
+  <title>Contact | [Your Name]</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body class="home">
+<body class="contact">
   <!-- Navigation -->
   <nav class="navbar">
     <div class="navbar-container">
@@ -21,13 +21,18 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>[Your Name]</h1>
-      <p>Freelance Mechanical Engineer</p>
-      <div class="availability">Available for New Projects <span class="dot green"></span></div>
-      <a href="contact.html" class="cta-btn">Discuss Your Project</a>
+  <!-- Contact Section -->
+  <section class="contact-section">
+    <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/[YOUR-FORM-ID]" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile">Your Profile</a></p>
     </div>
   </section>
 

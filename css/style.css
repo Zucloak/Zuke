@@ -1,15 +1,29 @@
-/* Global Styles */
+/* === Global Styles === */
 body {
   margin: 0;
   font-family: 'Roboto Condensed', sans-serif;
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
+  background-color: #000;
+  color: #fff;
   line-height: 1.6;
 }
 
-/* Navbar */
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* === Navbar === */
 .navbar {
-  background-color: #004066; /* Dark teal background */
+  background-color: #004066;
   padding: 1rem 2rem;
   display: flex;
   justify-content: center;
@@ -17,9 +31,9 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  border-radius: 20px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-  border: 5px solid #FFD700; /* Gold border */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: 5px solid #FFD700;
 }
 
 .navbar-container {
@@ -46,7 +60,7 @@ body {
   left: 0;
   right: 0;
   height: 5px;
-  background: #4ECDC4; /* Teal accent */
+  background: #4ECDC4;
   transform: scaleX(0);
   transition: transform 0.3s ease-in-out;
 }
@@ -57,7 +71,7 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #FFD700; /* Gold text */
+  color: #FFD700;
   font-weight: bold;
   text-transform: uppercase;
   display: flex;
@@ -76,10 +90,10 @@ body {
 }
 
 .nav-links a:hover {
-  color: #4ECDC4; /* Hover color (teal) */
+  color: #4ECDC4;
 }
 
-/* Hero Section */
+/* === Hero Section === */
 .hero {
   background-color: #000;
   height: 100vh;
@@ -113,13 +127,101 @@ body {
   background-color: #4ECDC4;
 }
 
-/* Portfolio Section */
-.portfolio {
+/* === About Section === */
+.about-section {
   padding: 60px 20px;
   text-align: center;
 }
 
-.portfolio h2 {
+.about-content {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headshot {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #FFD700;
+  margin-bottom: 20px;
+}
+
+.bio h2 {
+  color: #FFD700;
+  margin-bottom: 20px;
+}
+
+.skills .skill-bar {
+  width: 100%;
+  max-width: 400px;
+  margin: 10px auto;
+}
+
+.skill-bar span {
+  display: block;
+  margin-bottom: 5px;
+  color: #FFD700;
+}
+
+.progress {
+  background-color: #004066;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.progress-fill {
+  background-color: #FFD700;
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+/* === Services Section === */
+.services-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #00334D;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card i {
+  font-size: 3rem;
+  color: #FFD700;
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+/* === Portfolio Section === */
+.portfolio-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.portfolio-section h2 {
   font-size: 3rem;
   color: #FFD700;
   margin-bottom: 40px;
@@ -132,12 +234,12 @@ body {
 }
 
 .project-item {
-  background-color: #00334D; /* Darker teal card background */
+  background-color: #00334D;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
-  border: 5px solid #FFD700; /* Gold border */
+  border: 5px solid #FFD700;
 }
 
 .project-item img {
@@ -169,7 +271,71 @@ body {
   color: #000;
 }
 
-/* Footer */
+/* === Contact Section === */
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.contact-section h2 {
+  color: #FFD700;
+  margin-bottom: 30px;
+}
+
+.contact-section form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-section input,
+.contact-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #FFD700;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-section input:focus,
+.contact-section textarea:focus {
+  border-color: #4ECDC4;
+  outline: none;
+}
+
+.contact-section button {
+  background-color: #FFD700;
+  color: #000;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-section button:hover {
+  background-color: #4ECDC4;
+}
+
+.contact-info {
+  margin-top: 30px;
+  color: #ccc;
+}
+
+.contact-info a {
+  color: #FFD700;
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #4ECDC4;
+}
+
+/* === Footer === */
 footer {
   background-color: #00334D;
   padding: 20px 0;
@@ -187,7 +353,7 @@ footer .socials a:hover {
   color: #4ECDC4;
 }
 
-/* Responsive */
+/* === Responsive Design === */
 @media (max-width: 768px) {
   .nav-links {
     flex-direction: column;
@@ -197,5 +363,9 @@ footer .socials a:hover {
   .nav-links li {
     width: 100%;
     text-align: center;
+  }
+
+  .about-content {
+    flex-direction: column;
   }
 }
