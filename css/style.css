@@ -24,7 +24,7 @@ button {
 /* === Navbar === */
 .navbar {
   background-color: #004066;
-  padding: 0.4rem 0.8rem;
+  padding: 0.4rem 0.9rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,7 +73,6 @@ button {
   text-decoration: none;
   color: #FFD700;
   font-weight: bold;
-  font-size: 1.3rem;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
@@ -83,7 +82,7 @@ button {
 }
 
 .nav-links a i {
-  font-size: 0.8rem;
+  font-size: 0.5rem;
 }
 
 .nav-links a span {
