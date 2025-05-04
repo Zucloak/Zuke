@@ -384,7 +384,7 @@ footer .socials a:hover {
 }
 
 /* Show only on mobile */
-@media (max-width: 1440px) {
+@media (max-width: 200px) {
   .hamburger {
     display: block !important;
   }
