@@ -377,7 +377,7 @@ footer .socials a:hover {
 }
 
 /* Force hide on desktop */
-@media (min-width: 800px) {
+@media (min-width: 1100px) {
   .hamburger {
     display: none !important;
   }
