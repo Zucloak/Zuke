@@ -377,14 +377,14 @@ footer .socials a:hover {
 }
 
 /* Force hide on desktop */
-@media (min-width: 769px) {
+@media (min-width: 800px) {
   .hamburger {
     display: none !important;
   }
 }
 
 /* Show only on mobile */
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
   .hamburger {
     display: block !important;
   }
