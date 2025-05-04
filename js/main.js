@@ -1,14 +1,12 @@
-// Mobile Nav Toggle
-document.querySelector('.hamburger').addEventListener('click', () => {
-  document.querySelector('.nav-links').classList.toggle('active');
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
 
-// Portfolio Filter
-document.querySelectorAll('.filter-buttons button').forEach(button => {
-  button.addEventListener('click', () => {
-    const filter = button.dataset.filter;
-    document.querySelectorAll('.project-item').forEach(item => {
-      item.style.display = filter === 'all' || item.classList.contains(filter) ? 'block' : 'none';
-    });
+  if (!hamburger || !navLinks) {
+    console.error("Hamburger or nav-links NOT FOUND");
+    return;
+  }
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
   });
-});
