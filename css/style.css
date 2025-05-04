@@ -376,16 +376,17 @@ footer .socials a:hover {
   cursor: pointer;
 }
 
+/* Force hide on desktop */
 @media (min-width: 769px) {
   .hamburger {
     display: none !important;
   }
+}
 
+/* Show only on mobile */
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
-  }
-
+    display: block !important;
   }
 
   .nav-links {
