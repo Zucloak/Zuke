@@ -9,12 +9,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+    console.log("Hamburger clicked");
   });
-
-  // Optional: Close menu after clicking a link
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      navLinks.classList.remove('active');
-    });
-  });
-});
