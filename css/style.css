@@ -24,7 +24,10 @@ button {
 /* === Navbar === */
 .navbar {
   background-color: #004066;
-  padding: 0.5rem 1.5rem; /* Reduced height */
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -35,50 +38,19 @@ button {
 
 .navbar-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
+  gap: 2rem;
 }
 
-.logo {
-  color: #FFD700;
-  font-size: 1.5rem;
-  font-weight: bold;
-}
-
-/* Desktop Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
 }
 
 .nav-links li {
   position: relative;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #FFD700;
-  font-weight: bold;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.3rem;
-  transition: color 0.3s ease;
-  font-size: 0.9rem;
-}
-
-.nav-links a i {
-  font-size: 1.5rem;
-}
-
-.nav-links a span {
-  letter-spacing: 1px;
 }
 
 .nav-links li::before {
@@ -95,6 +67,30 @@ button {
 
 .nav-links li:hover::before {
   transform: scaleX(1);
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #FFD700;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a i {
+  font-size: 2rem;
+}
+
+.nav-links a span {
+  letter-spacing: 2px;
+}
+
+.nav-links a:hover {
+  color: #4ECDC4;
 }
 
 /* === Hero Section === */
